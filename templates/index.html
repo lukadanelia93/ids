@@ -1,0 +1,32 @@
+
+{% load static %}
+
+<h1>სია</h1>
+
+{% for sia in siaa %}
+
+                <img src="{% static sia.poto %}"/>
+
+                
+                <p class="card-text">ბარათის ნომერი: {{ sia.cardno }}</p>
+                <p class="card-text">სახელი: {{ sia.firstname }}</p>
+                <p class="card-text">გვარი: {{ sia.lastname }}</p>
+                <p class="card-text">მოქალაქეობა: {{ sia.cit }}</p>
+                {% if sia.sex == "ma" %}
+                <p class="card-text">სქესი: მამაკაცი</p>
+                {% else %}
+                <p class="card-text">სქესი: დედაკაცი</p>
+                {% endif %}
+                <p class="card-text">პირადი ნომერი: {{ sia.personalno }}</p>
+                <p class="card-text">დაბადების თარიღი: {{ sia.dateofbirth }}</p>
+                <p class="card-text">მოქმედების ვადა: {{ sia.dateofexpiry }}</p>
+                <p class="card-text">ხელმოწერა: {{ sia.signature }}</p>
+                <p class="card-text">დაბადების ადგილი: {{ sia.placeofbirth }}</p>
+                <p class="card-text">გაცემის თარიღი: {{ sia.dateofissue }}</p>
+                <p class="card-text">გაცემის ორგანო: {{ sia.issuingauthority }}</p>
+                
+              
+                
+
+{% endfor %}
+
